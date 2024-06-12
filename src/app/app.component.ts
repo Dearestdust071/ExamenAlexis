@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { FormularioComponent } from './vistas/privado/trabajador/formulario/formulario.component';
+import { FormularioTrabajador } from './vistas/privado/trabajador/formulario/formulario.component';
+import { FormularioBanco } from './vistas/privado/banco/formulario/formulario.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,FormularioComponent],
+  imports: [RouterOutlet,FormularioTrabajador,FormularioBanco],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

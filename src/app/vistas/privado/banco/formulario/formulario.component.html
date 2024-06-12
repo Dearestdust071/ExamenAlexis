@@ -1,1 +1,11 @@
-<p>formulario works!</p>
+<form [formGroup]="formulario" (ngSubmit)="Enviar()">
+    <mat-form-field>
+        <mat-label> Nombre del Banco</mat-label>
+        <input type="text" matInput="" formControlName="Nombre">
+        <mat-error></mat-error>
+    </mat-form-field>
+
+    <button type="button" (click)="Eliminar() ">Borrar</button>
+
+    <button type="submit">Guardar</button>
+</form>

@@ -1,113 +1,114 @@
 <form [formGroup]="formulario" (ngSubmit)="enviar_formualrio()">
 
 
-  <!-- (mat-form-field>mat-label+input[formControlName]+mat-error)*19 -->
-  <mat-form-field>
-    <mat-label>TrabajadorID</mat-label>
-    <input type="text" formControlName="TrabajadorID">
-    <mat-error></mat-error>
-  </mat-form-field>
+  <!-- (mat-form-field>mat-label+input[matInput][formControlName]+mat-error)*19 -->
+  
   <mat-form-field>
     <mat-label>Nombre</mat-label>
-    <input type="text" formControlName="Nombre">
-    <mat-error></mat-error>
+    <input type="text" matInput formControlName="Nombre">
+    <mat-error>Agrega un valor valido</mat-error>
   </mat-form-field>
   <mat-form-field>
-    <mat-label>Apellido_paterno</mat-label>
-    <input type="text" formControlName="Apellido_paterno">
-    <mat-error></mat-error>
+    <mat-label>Apellido Paterno</mat-label>
+    <input type="text" matInput formControlName="Apellido_paterno">
+    <mat-error>Agrega un valor valido</mat-error>
   </mat-form-field>
   <mat-form-field>
-    <mat-label>Apellido_materno</mat-label>
-    <input type="text" formControlName="Apellido_materno">
-    <mat-error></mat-error>
+    <mat-label>Apellido Materno</mat-label>
+    <input type="text" matInput formControlName="Apellido_materno">
+    <mat-error>Agrega un valor valido</mat-error>
   </mat-form-field>
   <mat-form-field>
-    <mat-label>FechaNacimiento</mat-label>
-    <input type="text" formControlName="FechaNacimiento">
-    <mat-error></mat-error>
+    <mat-label>Fecha de Nacimiento</mat-label>
+    <input type="text" matInput formControlName="FechaNacimiento">
+    <mat-error>Agrega un valor valido</mat-error>
   </mat-form-field>
   <mat-form-field>
     <mat-label>Calle</mat-label>
-    <input type="text" formControlName="Calle">
-    <mat-error></mat-error>
+    <input type="text" matInput formControlName="Calle">
+    <mat-error>Agrega un valor valido</mat-error>
   </mat-form-field>
   <mat-form-field>
     <mat-label>Numero</mat-label>
-    <input type="text" formControlName="Numero">
-    <mat-error></mat-error>
+    <input type="text" matInput formControlName="Numero">
+    <mat-error>Agrega un valor valido</mat-error>
   </mat-form-field>
   <mat-form-field>
     <mat-label>Colonia</mat-label>
-    <input type="text" formControlName="Colonia">
-    <mat-error></mat-error>
+    <input type="text" matInput formControlName="Colonia">
+    <mat-error>Agrega un valor valido</mat-error>
   </mat-form-field>
   <mat-form-field>
-    <mat-label>Codigo_postal</mat-label>
-    <input type="text" formControlName="Codigo_postal">
-    <mat-error></mat-error>
+    <mat-label>Codigo Postal</mat-label>
+    <input type="text" matInput formControlName="Codigo_postal">
+    <mat-error>Agrega un valor valido</mat-error>
   </mat-form-field>
   <mat-form-field>
     <mat-label>Puesto</mat-label>
-    <input type="text" formControlName="Puesto">
-    <mat-error></mat-error>
+    <input type="text" matInput formControlName="Puesto">
+    <mat-error>Agrega un valor valido</mat-error>
   </mat-form-field>
   <mat-form-field>
     <mat-label>Sueldo</mat-label>
-    <input type="text" formControlName="Sueldo">
-    <mat-error></mat-error>
+    <input type="text" matInput formControlName="Sueldo">
+    <mat-error>Agrega un valor valido</mat-error>
   </mat-form-field>
   <mat-form-field>
-    <mat-label>Cuenta_banco</mat-label>
-    <input type="text" formControlName="Cuenta_banco">
-    <mat-error></mat-error>
+    <mat-label>Cuenta de Banco</mat-label>
+    <input type="text" matInput formControlName="Cuenta_banco">
+    <mat-error>Agrega un valor valido</mat-error>
   </mat-form-field>
   <mat-form-field>
-    <mat-label>FechaIngreso</mat-label>
-    <input type="text" formControlName="FechaIngreso">
-    <mat-error></mat-error>
+    <mat-label>Fecha de Ingreso</mat-label>
+    <input type="text" matInput formControlName="FechaIngreso">
+    <mat-error>Agrega un valor valido</mat-error>
   </mat-form-field>
   <mat-form-field>
-    <mat-label>FechaSalida</mat-label>
-    <input type="text" formControlName="FechaSalida">
-    <mat-error></mat-error>
+    <mat-label>Fecha de Salida</mat-label>
+    <input type="text" matInput formControlName="FechaSalida">
+    <mat-error>Agrega un valor valido</mat-error>
   </mat-form-field>
   <mat-form-field>
-    <mat-label>AreaID</mat-label>
-    <input type="text" formControlName="AreaID">
-    <mat-error></mat-error>
+    <mat-label>Area</mat-label>
+    <input type="text" matInput formControlName="AreaID">
+    <mat-error>Agrega un valor valido</mat-error>
   </mat-form-field>
   <mat-form-field>
-    <mat-label>bancoID</mat-label>
-    <input type="text" formControlName="bancoID">
-    <mat-error></mat-error>
+    <mat-label>banco</mat-label>
+    <input type="text" matInput formControlName="bancoID">
+    <mat-error>Agrega un valor valido</mat-error>
   </mat-form-field>
   <mat-form-field>
-    <mat-label>SupervisorID</mat-label>
-    <input type="text" formControlName="SupervisorID">
-    <mat-error></mat-error>
+    <mat-label>Supervisor</mat-label>
+    <mat-select formControlName="SupervisorID">
+      <mat-option></mat-option>
+    </mat-select>
+    
+  <mat-error>Agrega un valor valido</mat-error>
   </mat-form-field>
   <mat-form-field>
-    <mat-label>DiasVacacionesPermitidos</mat-label>
-    <input type="text" formControlName="DiasVacacionesPermitidos">
-    <mat-error></mat-error>
+    <mat-label>Dias de Vacaciones Permitidos</mat-label>
+    <input type="text" matInput formControlName="DiasVacacionesPermitidos">
+    <mat-error>Agrega un valor valido</mat-error>
   </mat-form-field>
   <mat-form-field>
-    <mat-label>DiasVacacionesRestantes</mat-label>
-    <input type="text" formControlName="DiasVacacionesRestantes">
-    <mat-error></mat-error>
+    <mat-label>Dias Vacaciones Restantes</mat-label>
+    <input type="text" matInput formControlName="DiasVacacionesRestantes">
+    <mat-error>Agrega un valor valido</mat-error>
   </mat-form-field>
 
   <button type="button" (click)="agregar_subtrabajador(formulario.value.TrabajadorID)">agregarsubtrabajador</button>
 <div formArrayName="subtrabajadores">
-@for(subtrabajador of obtener_subtrabajdores()?.controls;track subtrabajador;let indice_subtrabajador=$index){
+@for(subtrabajador of obtener_subtrabajdores().controls;track subtrabajador;let indice_subtrabajador=$index){
 <div [formGroupName]="indice_subtrabajador">
 <mat-form-field>
   <mat-label>subtrabajador</mat-label>
   <mat-select formControlName="TrabajadorID">
     <mat-option></mat-option>
   </mat-select>
+  <mat-error>Agrega un valor valido</mat-error>
 </mat-form-field>
+<button type="button" (click)="eliminar_subtrabajador(indice_subtrabajador)">Borrar</button>
 </div>
 }
 </div>
