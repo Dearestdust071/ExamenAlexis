@@ -4,9 +4,11 @@ import { Component } from '@angular/core';
   selector: 'app-bancos',
   standalone: true,
   imports: [],
-  templateUrl: './bancos.component.html',
-  styleUrl: './bancos.component.css'
+  templateUrl: './banco.component.html',
+  styleUrl: './banco.component.css'
 })
 export class BancosComponent {
 
+
+  
 }

@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-areas',
   standalone: true,
   imports: [],
-  templateUrl: './areas.component.html',
-  styleUrl: './areas.component.css'
+  templateUrl: './area.component.html',
+  styleUrl: './area.component.css'
 })
 export class AreasComponent {
 
