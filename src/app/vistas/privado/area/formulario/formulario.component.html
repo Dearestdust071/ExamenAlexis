@@ -7,7 +7,8 @@
     </mat-form-field>
     <mat-form-field>
         <mat-label> Encargado </mat-label>
-        <input type="text" matInput="" formControlName="Nombre">
+     
+        <mat-select formControlName="EncargadoID"> <mat-option> </mat-option></mat-select>
         <mat-error></mat-error>
     </mat-form-field>
     <button type="button" (click)="Eliminar() ">Borrar</button>

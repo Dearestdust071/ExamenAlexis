@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ConexionService } from '../../../servicios/conexion.service';
 
 @Component({
   selector: 'app-areas',
@@ -8,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './area.component.css'
 })
 export class AreasComponent {
-
+  private conexion:ConexionService = inject(ConexionService)
+  areas:any;
+  async ngOnInit(){
+    this.areas=await this.conexion.peticion("post","areas","GetAll")
+    console.log(this.areas);
+  }
 }
