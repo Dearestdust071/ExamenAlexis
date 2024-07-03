@@ -12,7 +12,7 @@ export class VacacionesComponent {
   private conexion:ConexionService = inject(ConexionService)
   vacasiones:any;
   async ngOnInit(){
-    this.vacasiones=await this.conexion.peticion("post","vacasiones","GetAll")
+    this.vacasiones=await this.conexion.peticion("post","vacaciones","GetAll")
     console.log(this.vacasiones);
   }
 }
