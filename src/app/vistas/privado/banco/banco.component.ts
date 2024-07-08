@@ -1,10 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { ConexionService } from '../../../servicios/conexion.service';
-
+import {MatTableModule} from '@angular/material/table';
 @Component({
   selector: 'app-bancos',
   standalone: true,
-  imports: [],
+  imports: [MatTableModule],
   templateUrl: './banco.component.html',
   styleUrl: './banco.component.css'
 })
