@@ -31,7 +31,7 @@ formulario: FormGroup= this.formbuilder.group({
   FechaIngreso: new FormControl(null,[Validators.required]),
   FechaSalida: new FormControl(null),
   AreaID: new FormControl(null,[Validators.required]),
-  bancoID: new FormControl(null),
+  BancoID: new FormControl(null),
   SupervisorID: new FormControl(null),
   DiasVacacionesPermitidos: new FormControl(null),
   DiasVacacionesRestantes: new FormControl(null),
@@ -59,7 +59,7 @@ obtener_subtrabajdores(): FormArray{
   return this.formulario.controls['subtrabajadores'] as FormArray
 }
 enviar_formualrio(){
-  if(this.formulario.valid) 
+  if(this.formulario.valid)
   console.log(this.formulario.value)
 }
 
