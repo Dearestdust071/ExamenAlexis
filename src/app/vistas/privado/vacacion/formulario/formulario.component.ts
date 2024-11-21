@@ -4,6 +4,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { provideNativeDateAdapter } from '@angular/material/core';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 
 
@@ -17,7 +18,8 @@ import { provideNativeDateAdapter } from '@angular/material/core';
 })
 export class FormularioVacacion {
   private formbuilder: FormBuilder = inject(FormBuilder)
-
+  private router: Router=inject(Router);//nos va a apermitir obtener el link
+  private activatedrouter: ActivatedRoute = inject(ActivatedRoute);
   formulario: FormGroup = this.formbuilder.group({
     VacacionesID: [null],
     TrabajadorID: [null, [Validators.required]],
@@ -26,6 +28,17 @@ export class FormularioVacacion {
 
   })
 
+  ngAfterViewInit(){
+    if (this.router.url.includes("detalle")){ //si la ruta incluye la palabra detalle lo vamos a cachar
+    // const id = this.activatedrouter.snapshot.queryParamMap.get("id")
+    this.activatedrouter.params.subscribe((params:Params)=> {
+      const id = params['id'];
+      console.log(id);
+    })
+    }
+    }
+
+    
   Enviar() {
     if (this.formulario.valid) {
 
@@ -41,8 +54,8 @@ export class FormularioVacacion {
           let date1 = new Date(this.formulario.value.FechaInicio).getTime();
         let date2 = new Date(this.formulario.value.FechaFin).getTime();
         console.log(Math.round(Math.abs((date2-date1)/86400000)))
-        
-        
+
+
       }
     }, 150);
 

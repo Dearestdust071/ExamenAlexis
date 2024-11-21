@@ -1,1 +1,25 @@
-<p>trabajadores works!</p>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+
+  <ng-container matColumnDef="Nombre_Trabajador">
+    <th mat-header-cell *matHeaderCellDef> Trabajador </th>
+    <td mat-cell *matCellDef="let element"> {{element.Nombre_Trabajador}} </td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="NombreArea">
+    <th mat-header-cell *matHeaderCellDef> Area </th>
+    <td mat-cell *matCellDef="let element"> {{element.NombreArea}} </td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="Nombre_Supervisor">
+    <th mat-header-cell *matHeaderCellDef> Supervisor </th>
+    <td mat-cell *matCellDef="let element"> {{element.Nombre_Supervisor}} </td>
+  </ng-container>
+
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"[routerLink] = "'/trabajador/detalle/'+row.TrabajadorID"></tr>
+</table>

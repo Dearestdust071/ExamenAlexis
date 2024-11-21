@@ -1,10 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { ConexionService } from '../../../servicios/conexion.service';
 import {MatTableModule} from '@angular/material/table';
+import { DatePipe } from '@angular/common';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-vacaciones',
   standalone: true,
-  imports: [MatTableModule],
+  imports: [MatTableModule,DatePipe,RouterLink],
   templateUrl: './vacacion.component.html',
   styleUrl: './vacacion.component.css'
 })
@@ -20,5 +22,5 @@ export class VacacionesComponent {
     console.log(this.vacasiones);
     this.dataSource = this.vacasiones;
   }
-  displayedColumns: string[] = ['TrabajadorID', 'FechaInicio', 'FechaFin'];
+  displayedColumns: string[] = ['Nombre_completo_trabajador', 'FechaInicio', 'FechaFin'];
 }

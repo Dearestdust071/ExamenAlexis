@@ -2,27 +2,27 @@
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
 
-    <ng-container matColumnDef="TrabajadorID">
-      <th mat-header-cell *matHeaderCellDef> Trabajador ID </th>
-      <td mat-cell *matCellDef="let element"> {{element.TrabajadorID}} </td>
+    <ng-container matColumnDef="Nombre_completo_trabajador">
+      <th mat-header-cell *matHeaderCellDef> Trabajador </th>
+      <td mat-cell *matCellDef="let element"> {{element.Nombre_completo_trabajador}} </td>
     </ng-container>
 
 
     <ng-container matColumnDef="FechaInicio">
       <th mat-header-cell *matHeaderCellDef> Fecha Inicio </th>
-      <td mat-cell *matCellDef="let element"> {{element.FechaInicio}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.FechaInicio|date:"mediumDate"}} </td>
     </ng-container>
 
 
     <ng-container matColumnDef="FechaFin">
       <th mat-header-cell *matHeaderCellDef> Fecha Fin </th>
-      <td mat-cell *matCellDef="let element"> {{element.FechaFin}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.FechaFin|date:"mediumDate"}} </td>
     </ng-container>
 
 
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink] = "'/vacacion/detalle/'+row.VacacionesID"></tr>
   </table>
 
 

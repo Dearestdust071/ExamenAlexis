@@ -3,6 +3,7 @@ import { FormArray, FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFo
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'FormularioTrabajador',
@@ -14,6 +15,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 export class FormularioTrabajador {
 
 private formbuilder:FormBuilder=inject(FormBuilder)
+private router: Router=inject(Router);//nos va a apermitir obtener el link
+private activatedrouter: ActivatedRoute = inject(ActivatedRoute)
 
 formulario: FormGroup= this.formbuilder.group({
   TrabajadorID: new FormControl(null),
@@ -39,6 +42,16 @@ formulario: FormGroup= this.formbuilder.group({
   subtrabajadores: new FormArray([])
 
 })
+
+ngAfterViewInit(){
+  if (this.router.url.includes("detalle")){ //si la ruta incluye la palabra detalle lo vamos a cachar
+  // const id = this.activatedrouter.snapshot.queryParamMap.get("id")
+  this.activatedrouter.params.subscribe((params:Params)=> {
+    const id = params['id'];
+    console.log(id);
+  })
+  }
+  }
 
 subtrabajdor(id:string): FormGroup{
   return this.formbuilder.group({
